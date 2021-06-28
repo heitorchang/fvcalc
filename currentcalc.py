@@ -9,7 +9,7 @@ birth_year = 1983
 
 def pmt(retirement_age, annual_yield, pv, fv):
     # Compute PMT
-    # cash flows: positive is investment, negative is withdrawal
+    # cash flows: money received is positive, money paid out is negative
 
     years_to_invest = (birth_year + retirement_age) - datetime.now().year
     i = (1 + (annual_yield / 100)) ** (1/12) - 1
