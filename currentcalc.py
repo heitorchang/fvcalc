@@ -35,3 +35,17 @@ def fv(retirement_age, annual_yield, pv, pmt):
     fv = (-pv - pmt * ((1 - jn) / i)) / jn
 
     return round(fv, 2)
+
+
+def pv(retirement_age, annual_yield, fv, pmt):
+    years_to_invest = (birth_year + retirement_age) - datetime.now().year
+
+    i = (1 + (annual_yield / 100)) ** (1/12) - 1
+    j = 1 + i
+    n = years_to_invest * 12
+
+    jn = j ** (-n)
+
+    pv = -(j * pmt * ((1 - jn) / i) + fv * jn)
+
+    return round(pv, 2)
