@@ -7,6 +7,13 @@ from datetime import datetime
 
 birth_year = 1983
 
+def tesdir(annual_yield):
+    ret_age = 67
+    pv = -140_000
+    fv = 2_000_000
+    return pmt(ret, annual_yield, pv, fv)
+
+
 def pmt(retirement_age, annual_yield, pv, fv):
     # Compute PMT
     # cash flows: money received is positive, money paid out is negative
