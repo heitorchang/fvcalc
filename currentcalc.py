@@ -1,9 +1,9 @@
 from datetime import datetime
 
-
 # Signatures:
 # pmt(retirement_age, annual_yield, pv, fv)
 # fv(retirement_age, annual_yield, pv, pmt)
+# pv(retirement_age, annual_yield, fv, pmt)
 
 birth_year = 1983
 
@@ -11,7 +11,7 @@ def tesdir(annual_yield):
     ret_age = 67
     pv = -140_000
     fv = 2_000_000
-    return pmt(ret, annual_yield, pv, fv)
+    return pmt(ret_age, annual_yield, pv, fv)
 
 
 def pmt(retirement_age, annual_yield, pv, fv):
